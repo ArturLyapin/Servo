@@ -2,7 +2,7 @@ module Servo
   class Context
     def initialize(params = {})
       params.each_pair do |key, value|
-        singleton_class.class_eval {attr_accessor key}
+        singleton_class.class_eval { attr_accessor key }
         instance_variable_set("@#{key}", value)
       end
     end
@@ -23,7 +23,7 @@ module Servo
     def define_accessors(accessors)
       return if accessors.nil?
 
-      singleton_class.class_eval {attr_accessor accessors}
+      singleton_class.class_eval { attr_accessor accessors }
     end
   end
 end

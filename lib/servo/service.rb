@@ -17,8 +17,7 @@ module Servo
     # TODO: private?
     attr_reader :context
 
-    def call
-    end
+    def call; end
 
     def self.context_accessors(accessors)
       @context_accessors = accessors
